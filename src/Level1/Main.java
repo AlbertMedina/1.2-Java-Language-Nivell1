@@ -11,8 +11,8 @@ public class Main {
         System.out.println();
 
         // adding some products
-        sale.addProduct(new Product("Water", 0.99));
-        sale.addProduct(new Product("Chips", 2.49));
+        addProduct(sale, "Water", 0.99);
+        addProduct(sale, "Chips", 2.49);
         showSaleTotalPrice(sale);
 
         System.out.println();
@@ -31,6 +31,14 @@ public class Main {
             System.out.println(String.format("Sale total price: %.2f €", sale.calculateTotalPrice()));
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    private static void addProduct(Sale sale, String name, double price) {
+        try {
+            sale.addProduct(new Product(name, price));
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error adding product: " + e.getMessage());
         }
     }
 
