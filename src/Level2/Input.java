@@ -72,10 +72,10 @@ public class Input {
             try {
                 String input = SCANNER.nextLine();
                 if (input.length() != 1) {
-                    throw new Exception("Format error");
+                    throw new InvalidInputException("Format error");
                 }
                 return input.charAt(0);
-            } catch (Exception e) {
+            } catch (InvalidInputException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -87,10 +87,10 @@ public class Input {
             try {
                 String input = SCANNER.nextLine();
                 if (input.isEmpty()) {
-                    throw new Exception("Format error");
+                    throw new InvalidInputException("Format error");
                 }
                 return input;
-            } catch (Exception e) {
+            } catch (InvalidInputException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -102,10 +102,10 @@ public class Input {
             try {
                 String input = SCANNER.nextLine();
                 if (input.length() != 1 || !input.equalsIgnoreCase("n") && !input.equalsIgnoreCase("y")) {
-                    throw new Exception("Format error");
+                    throw new InvalidInputException("Format error");
                 }
                 return input.equalsIgnoreCase("y");
-            } catch (Exception e) {
+            } catch (InvalidInputException e) {
                 System.out.println(e.getMessage());
             }
         }
