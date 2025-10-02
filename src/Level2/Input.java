@@ -96,7 +96,7 @@ public class Input {
         }
     }
 
-    public static Boolean readYesOrNot(String message) {
+    public static boolean readYesOrNot(String message) {
         while (true) {
             System.out.print(message + ": ");
             try {
