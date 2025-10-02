@@ -23,7 +23,7 @@ public class InputHandler {
             }
         }
     }
-    
+
     public static String readString(String message) {
         while (true) {
             System.out.print(message + ": ");
@@ -37,5 +37,9 @@ public class InputHandler {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    public static void closeScanner() {
+        SCANNER.close();
     }
 }

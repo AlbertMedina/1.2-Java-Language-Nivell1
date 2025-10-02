@@ -65,6 +65,8 @@ public class Cinema {
             }
             System.out.println();
         } while (option != 0);
+
+        InputHandler.closeScanner();
     }
 
     public static int enterPositiveInteger(String message) {
