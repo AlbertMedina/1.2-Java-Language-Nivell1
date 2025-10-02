@@ -45,7 +45,7 @@ public class Main {
     private static void showProductAtIndex(Sale sale, int index) {
         try {
             System.out.println("Product at index " + index + ": " + sale.getProductAtIndex(index).toString());
-        } catch (Exception e) {
+        } catch (IndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
         }
     }
